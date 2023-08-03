@@ -1,0 +1,13 @@
+<!-- pokemon.component.html -->
+<form (submit)="getPokemonData()">
+  <label for="pokemonInput">Enter Pokemon Name or ID:</label>
+  <input type="text" id="pokemonInput" [(ngModel)]="pokemonNameOrId" />
+  <button type="submit">Search</button>
+</form>
+
+<div *ngIf="pokemonData">
+  <h2>{{ pokemonData.name }}</h2>
+  <img [src]="pokemonData.image" alt="Pokemon Image" />
+  <p>Types: {{ pokemonData.types.join(', ') }}</p>
+  <p>Abilities: {{ pokemonData.abilities.join(', ') }}</p>
+</div>

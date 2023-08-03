@@ -12,7 +12,7 @@ export class homeComponent implements OnInit {
 
   pokemonNameOrId = "";
   pokemonData: any; // This will hold the data received from the backend
-  private subscription: Subscription; // Store the subscription to unsubscribe later
+  private subscription: Subscription = new Subscription; // Store the subscription to unsubscribe later
 
 
   constructor(private http: HttpClient) {}
